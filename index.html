@@ -36,6 +36,7 @@
                 <div class="status-bar">
                     <div class="status-chip">FPS <span id="fps-val">--</span></div>
                     <div class="status-chip" id="state-val">Running</div>
+                    <div class="status-chip">Brush <span id="brush-mode-val">Bloom</span></div>
                 </div>
 
                 <div class="controls">
@@ -55,6 +56,10 @@
                         <label for="bloom">Bloom <span id="bloom-val">0.80</span></label>
                         <input type="range" id="bloom" min="0" max="1.8" step="0.01" value="0.8">
                     </div>
+                    <div class="control-group">
+                        <label for="flow">Flow <span id="flow-val">0.08</span></label>
+                        <input type="range" id="flow" min="0" max="1.4" step="0.01" value="0.08">
+                    </div>
                     <div class="control-group control-select">
                         <label for="palette">Palette</label>
                         <select id="palette">
@@ -62,6 +67,16 @@
                             <option value="1">Solar Flare</option>
                             <option value="2">Aurora</option>
                             <option value="3">Cyber Moss</option>
+                            <option value="4">Ember Rift</option>
+                        </select>
+                    </div>
+                    <div class="control-group control-select">
+                        <label for="design">Design</label>
+                        <select id="design">
+                            <option value="0" selected>Original Halo</option>
+                            <option value="1">Hex Bloom</option>
+                            <option value="2">Spiral Orbit</option>
+                            <option value="3">Mirror Lattice</option>
                         </select>
                     </div>
                 </div>
@@ -72,7 +87,7 @@
                     <button id="seed-btn" type="button">New Seed</button>
                 </div>
 
-                <p class="hint">Drag to inject growth. Keyboard: <kbd>Space</kbd> pause, <kbd>R</kbd> reset, <kbd>N</kbd> new seed, <kbd>M</kbd> menu.</p>
+                <p class="hint">Left-drag blooms new growth. Right-drag carves a crater with a regrowth ring. Keyboard: <kbd>Space</kbd> pause, <kbd>R</kbd> reset, <kbd>N</kbd> new seed, <kbd>M</kbd> menu.</p>
             </div>
         </aside>
     </div>
