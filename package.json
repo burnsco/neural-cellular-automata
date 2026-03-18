@@ -9,8 +9,9 @@
     "preview": "vite preview",
     "lint": "oxlint",
     "format": "oxfmt",
-    "deploy": "bun run build && bunx wrangler pages deploy dist",
-    "deploy:production": "bun run build && bunx wrangler pages deploy dist --branch main",
+    "deploy": "bun run build && bunx wrangler deploy",
+    "deploy:dry-run": "bunx wrangler deploy --dry-run",
+    "cf:status": "../scripts/cf-portfolio.sh status neural-cellular-automata",
     "prepare": "husky"
   },
   "devDependencies": {
